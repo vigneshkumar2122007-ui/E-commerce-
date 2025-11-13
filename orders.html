@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders - E-Commerce Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: white;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #fff;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #1abc9c;
+    }
+
+    .orders-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1abc9c;
+      margin-bottom: 25px;
+      font-size: 32px;
+    }
+
+    .order-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .order-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .order-header h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .order-status {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .delivered { background: #2ecc71; }
+    .processing { background: #f39c12; }
+    .cancelled { background: #e74c3c; }
+
+    .order-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .order-item {
+      flex: 1 1 250px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .order-item img {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .order-item h4 {
+      margin: 0;
+      font-size: 17px;
+      color: #2c3e50;
+    }
+
+    .order-item p {
+      margin: 2px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .order-total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #1abc9c;
+    }
+
+    footer {
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .order-details {
+        flex-direction: column;
+      }
+
+      .order-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header><h1>My Orders</h1></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Product Items</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="orders.html" class="active">Orders</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Customer Care</a>
+    <a href="report.html">Report</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <section class="orders-container">
+    <h2>Your Recent Orders</h2>
+
+    <div class="order-card">
+      <div class="order-header">
+        <h3>Order #1023</h3>
+        <span class="order-status delivered">Delivered</span>
+      </div>
+      <div class="order-details">
+        <div class="order-item">
+          <img src="https://plus.unsplash.com/premium_photo-1678099940967-73fe30680949?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2lyZWxlc3MlMjBoZWFkcGhvbmVzfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Product">
+          <div>
+            <h4>Wireless Headphones</h4>
+            <p>Quantity: 1</p>
+            <p>Price: ₹2,999</p>
+          </div>
+        </div>
+        <div class="order-item">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/036/780/706/small/ai-generated-innovative-smart-watch-mockup-for-tech-marketing-ai-generated-photo.jpg" alt="Product">
+          <div>
+            <h4>Smart Watch</h4>
+            <p>Quantity: 1</p>
+            <p>Price: ₹4,499</p>
+          </div>
+        </div>
+      </div>
+      <p class="order-total">Total: ₹7,498</p>
+    </div>
+
+    <div class="order-card">
+      <div class="order-header">
+        <h3>Order #1022</h3>
+        <span class="order-status processing">Processing</span>
+      </div>
+      <div class="order-details">
+        <div class="order-item">
+          <img src="https://images.unsplash.com/photo-1582978571763-2d039e56f0c3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ymx1ZXRvb3RoJTIwc3BlYWtlcnxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000" alt="Product">
+          <div>
+            <h4>Bluetooth Speaker</h4>
+            <p>Quantity: 1</p>
+            <p>Price: ₹1,999</p>
+          </div>
+        </div>
+      </div>
+      <p class="order-total">Total: ₹1,999</p>
+    </div>
+
+    <div class="order-card">
+      <div class="order-header">
+        <h3>Order #1021</h3>
+        <span class="order-status cancelled">Cancelled</span>
+      </div>
+      <div class="order-details">
+        <div class="order-item">
+          <img src="https://www.leetdesk.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fleetdesk%2FZk3-0iol0Zci9W2z_Blog_GamingMaus_TitleImage2.png%3Fauto%3Dformat%2Ccompress&w=3840&q=75" alt="Product">
+          <div>
+            <h4>Gaming Mouse</h4>
+            <p>Quantity: 1</p>
+            <p>Price: ₹1,499</p>
+          </div>
+        </div>
+      </div>
+      <p class="order-total">Total: ₹1,499</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My E-Commerce Portal | Designed with ❤️ by Balaji</p>
+  </footer>
+
+</body>
+</html>

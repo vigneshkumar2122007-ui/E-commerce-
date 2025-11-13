@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - E-Commerce Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1542831371-29b0f74f9713') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* About content */
+    .about-section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .about-section h2 {
+      color: #1abc9c;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      line-height: 1.8;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* Mission and Vision */
+    .mv-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 40px auto;
+      max-width: 900px;
+      gap: 20px;
+    }
+
+    .mv-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 300px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .mv-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .mv-card h3 {
+      color: #1abc9c;
+      margin-bottom: 10px;
+    }
+
+    /* Team section */
+    .team-section {
+      background-color: #f4f4f9;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .team-section h2 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .team-member {
+      background: white;
+      border-radius: 10px;
+      width: 220px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .team-member h4 {
+      margin: 5px 0;
+      color: #1abc9c;
+    }
+
+    .team-member p {
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>About Us</h1></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Product Items</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="orders.html">Orders</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Customer Care</a>
+    <a href="report.html">Report</a>
+    <a href="about.html" class="active">About Us</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Welcome to My E-Commerce Portal</h1>
+    <p>Where quality meets affordability. We aim to bring you the best online shopping experience with top-rated products and secure delivery.</p>
+  </section>
+
+  <section class="about-section">
+    <h2>Who We Are</h2>
+    <p>
+      Founded in 2025, <strong>My E-Commerce Portal</strong> is a next-generation shopping platform designed to make online shopping simple, fun, and reliable. 
+      We offer a wide range of products including electronics, fashion, accessories, and home essentials — all from trusted brands. 
+      Our goal is to ensure that every customer enjoys a seamless shopping experience from browsing to delivery.
+    </p>
+  </section>
+
+  <section class="mv-section">
+    <div class="mv-card">
+      <h3>Our Mission</h3>
+      <p>To make online shopping effortless and enjoyable by offering high-quality products at the best prices, with quick and reliable delivery services.</p>
+    </div>
+    <div class="mv-card">
+      <h3>Our Vision</h3>
+      <p>To become the most customer-centric e-commerce platform, recognized globally for trust, innovation, and customer satisfaction.</p>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1" alt="CEO">
+        <h4>Balaji S</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Manager">
+        <h4>Priya Sharma</h4>
+        <p>Operations Manager</p>
+      </div>
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" alt="Designer">
+        <h4>Ravi Kumar</h4>
+        <p>UI/UX Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My E-Commerce Portal | Designed with ❤️ by Balaji</p>
+  </footer>
+</body>
+</html>

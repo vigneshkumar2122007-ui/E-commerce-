@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report an Issue - E-Commerce Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: white;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #fff;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #1abc9c;
+    }
+
+    .report-banner {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('https://images.unsplash.com/photo-1581091870627-3f1b2c7e89b7') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .report-banner h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .report-banner p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .report-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .report-container h2 {
+      color: #1abc9c;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form label {
+      font-weight: 600;
+      color: #444;
+    }
+
+    form input, form select, form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    form input:focus, form select:focus, form textarea:focus {
+      border-color: #1abc9c;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    form input[type="file"] {
+      border: none;
+      background: #f9f9f9;
+    }
+
+    form input[type="submit"] {
+      background: #1abc9c;
+      color: white;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 12px;
+      transition: background 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background: #16a085;
+    }
+
+    .success-message {
+      text-align: center;
+      color: #2ecc71;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .report-container {
+        margin: 20px;
+        padding: 25px;
+      }
+
+      .report-banner h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header><h1>Report an Issue</h1></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Product Items</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="orders.html">Orders</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Customer Care</a>
+    <a href="report.html" class="active">Report</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <section class="report-banner">
+    <h1>Facing an Issue?</h1>
+    <p>We’re here to help! Please report any problems or concerns, and our team will get back to you shortly.</p>
+  </section>
+
+  <section class="report-container">
+    <h2>Submit Your Report</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="orderid">Order ID (optional)</label>
+      <input type="text" id="orderid" placeholder="Enter your order ID if applicable">
+
+      <label for="issue">Issue Type</label>
+      <select id="issue" required>
+        <option value="">Select an issue</option>
+        <option>Payment Problem</option>
+        <option>Delivery Delay</option>
+        <option>Product Damage</option>
+        <option>Wrong Item Received</option>
+        <option>Website/App Error</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Describe the Issue</label>
+      <textarea id="message" placeholder="Write your issue or feedback here..." required></textarea>
+
+      <label for="file">Attach Screenshot (optional)</label>
+      <input type="file" id="file">
+
+      <input type="submit" value="Submit Report">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My E-Commerce Portal | Designed with ❤️ by Balaji</p>
+  </footer>
+
+</body>
+</html>

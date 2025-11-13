@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews - E-Commerce Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #fff;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #1abc9c;
+    }
+
+    .review-banner {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('https://images.unsplash.com/photo-1607083206173-704a6f8a61b4') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .review-banner h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .review-banner p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .reviews-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .review-user {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .review-user img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .review-user h3 {
+      margin: 0;
+      color: #16a085;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 18px;
+    }
+
+    .review-text {
+      margin-top: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .add-review {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .add-review h2 {
+      color: #1abc9c;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    form input, form textarea, form select {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 15px;
+    }
+
+    form input:focus, form textarea:focus, form select:focus {
+      border-color: #1abc9c;
+    }
+
+    form textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    form input[type="submit"] {
+      background: #1abc9c;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background: #16a085;
+    }
+
+    footer {
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header><h1>Customer Reviews</h1></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Product Items</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="orders.html">Orders</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="reviews.html" class="active">Reviews</a>
+    <a href="contact.html">Customer Care</a>
+    <a href="report.html">Report</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <section class="review-banner">
+    <h1>What Our Customers Say</h1>
+    <p>We value your feedback! Read real customer experiences or share your own review below.</p>
+  </section>
+
+  <section class="reviews-container">
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-user">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+          <h3>Ananya Sharma</h3>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <p class="review-text">Amazing service! My order was delivered on time and the product quality was top-notch. Will definitely shop again!</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-user">
+          <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="User">
+          <h3>Ravi Kumar</h3>
+        </div>
+        <div class="stars">★★★★☆</div>
+      </div>
+      <p class="review-text">Good experience overall, but packaging could be improved. Customer support was quick to help with my query.</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-user">
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="User">
+          <h3>Priya Nair</h3>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <p class="review-text">Loved the user interface and product variety! I especially liked how fast the checkout process was. Great job!</p>
+    </div>
+
+    <div class="add-review">
+      <h2>Write a Review</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <select required>
+          <option value="">Rate Your Experience</option>
+          <option>★★★★★ Excellent</option>
+          <option>★★★★☆ Good</option>
+          <option>★★★☆☆ Average</option>
+          <option>★★☆☆☆ Poor</option>
+          <option>★☆☆☆☆ Very Bad</option>
+        </select>
+        <textarea placeholder="Write your review here..." required></textarea>
+        <input type="submit" value="Submit Review">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My E-Commerce Portal | Designed with ❤️ by Balaji</p>
+  </footer>
+
+</body>
+</html>

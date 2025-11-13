@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - E-Commerce Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      padding: 25px 0;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffeb3b;
+    }
+
+    .register-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      padding: 20px;
+    }
+
+    .register-box {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-25px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .register-box h2 {
+      margin-bottom: 20px;
+      color: #1abc9c;
+      font-size: 28px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    form label {
+      text-align: left;
+      font-weight: 500;
+      color: #555;
+      font-size: 15px;
+    }
+
+    form input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    form input:focus {
+      border-color: #1abc9c;
+    }
+
+    form input[type="submit"] {
+      background: #1abc9c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background: #16a085;
+    }
+
+    .register-box p {
+      margin-top: 15px;
+      color: #555;
+    }
+
+    .register-box a {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .register-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: white;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .register-box {
+        padding: 30px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header><h1>User Registration</h1></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Product Items</a>
+    <a href="register.html" class="active">Register</a>
+    <a href="login.html">Login</a>
+    <a href="orders.html">Orders</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Customer Care</a>
+    <a href="report.html">Report</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <section class="register-container">
+    <div class="register-box">
+      <h2>Create Your Account</h2>
+      <form action="#">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Re-enter your password" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <input type="submit" value="Register">
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My E-Commerce Portal | Designed with ❤️ by Balaji</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - E-Commerce Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h3 {
+      color: #2c3e50;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #1abc9c;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px 10px 10px;
+    }
+
+    .btn {
+      flex: 1;
+      margin: 0 5px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #16a085;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Product Gallery</h1></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Product Items</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="orders.html">Orders</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Customer Care</a>
+    <a href="report.html">Report</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <section class="container">
+    <h2>Shop Our Top Picks</h2>
+    <div class="product-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone">
+        <div class="product-info">
+          <h3>Smartphone X1</h3>
+          <p class="price">₹25,999</p>
+        </div>
+        <div class="btn-group">
+          <button class="btn">Add to Cart</button>
+          <button class="btn">Wishlist</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptop">
+        <div class="product-info">
+          <h3>Laptop Pro 15</h3>
+          <p class="price">₹69,999</p>
+        </div>
+        <div class="btn-group">
+          <button class="btn">Add to Cart</button>
+          <button class="btn">Wishlist</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVhcmJ1ZHN8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000" alt="Earbuds">
+        <div class="product-info">
+          <h3>Wireless Earbuds</h3>
+          <p class="price">₹2,499</p>
+        </div>
+        <div class="btn-group">
+          <button class="btn">Add to Cart</button>
+          <button class="btn">Wishlist</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/036/780/706/small/ai-generated-innovative-smart-watch-mockup-for-tech-marketing-ai-generated-photo.jpg" alt="Watch">
+        <div class="product-info">
+          <h3>Smart Watch</h3>
+          <p class="price">₹3,999</p>
+        </div>
+        <div class="btn-group">
+          <button class="btn">Add to Cart</button>
+          <button class="btn">Wishlist</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1637437757614-6491c8e915b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnQlMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000" alt="Shoes">
+        <div class="product-info">
+          <h3>Running Shoes</h3>
+          <p class="price">₹1,899</p>
+        </div>
+        <div class="btn-group">
+          <button class="btn">Add to Cart</button>
+          <button class="btn">Wishlist</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBFYhA2swHUuq1Hzyb0LKOrBP_OE3izbq89Q&s" alt="Headphones">
+        <div class="product-info">
+          <h3>Noise Cancelling Headphones</h3>
+          <p class="price">₹4,999</p>
+        </div>
+        <div class="btn-group">
+          <button class="btn">Add to Cart</button>
+          <button class="btn">Wishlist</button>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My E-Commerce Portal | Designed with ❤️ by Balaji</p>
+  </footer>
+</body>
+</html>
